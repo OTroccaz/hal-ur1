@@ -8902,6 +8902,18 @@ body {
     right: 20%;
     color: #dee2e6; }
 
+.table-sm th,
+.table-sm td {
+  padding: 0.25rem;
+  font-size: .75rem;
+  font-weight: 400; }
+
+#scrollBackToTop {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px; }
+
 html {
   position: relative;
   min-height: 100%; }
