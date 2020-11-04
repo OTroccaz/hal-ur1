@@ -57,8 +57,8 @@
                        
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle arrow-none" href="croshal.html" id="topnav-crosshal" role="button">
-                                                <i class="mdi mdi-label-multiple text-primary mr-1"></i>Cros<span class="font-weight-bold">HAL</span> 
+                                            <a class="nav-link dropdown-toggle arrow-none" href="crosshal.html" id="topnav-crosshal" role="button">
+                                                <i class="mdi mdi-label-multiple text-primary mr-1"></i>Cross<span class="font-weight-bold">HAL</span> 
                                             </a>
                                         </li>
                                         <li class="nav-item dropdown">
@@ -82,7 +82,7 @@
 
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle arrow-none" href="zip2hal.html" id="topnav-myhal" role="button">
-                                                <i class="mdi mdi mdi-account-card-details text-primary mr-1"></i>Zip2<span class="font-weight-bold">HAL</span> 
+                                                <i class="mdi mdi mdi-folder-zip-outline text-primary mr-1"></i>Zip2<span class="font-weight-bold">HAL</span> 
                                             </a>
                                         </li>
                                         <!-- <li class="nav-item dropdown">
@@ -130,16 +130,17 @@
                         <div class="row">
                             <div class="col-xl-8 col-lg-6 d-flex">
                                 <!-- project card -->
-                                <div class="card d-block w-100">
+                                <div class="card d-block w-100 shadow-lg">
                                     <div class="card-body">
                                         
                                         <!-- project title-->
                                         <h2 class="h1 mt-0">
+                                            <i class="mdi mdi mdi-account-card-details text-primary"></i>
                                             <span class="font-weight-light">My</span><span class="text-primary">HAL</span>
                                         </h2>
                                         <h5 class="badge badge-primary badge-pill">Présentation</h5>
 
-                                        <p class="text-muted mb-2">
+                                        <p class=" mb-2">
                                            MyHAL is a PHP program by <a target="_blank" href="https://ecobio.univ-rennes1.fr/personnel.php?qui=Olivier_Troccaz">Olivier Troccaz</a> (ECOBIO - OSUR) to help you check your publication list in HAL.
 <br>If you need help, please contact <a target="_blank" href="https://openaccess.univ-rennes1.fr/interlocuteurs/laurent-jonchere">Laurent Jonchère</a> or <a target="_blank" href="https://ecobio.univ-rennes1.fr/personnel.php?qui=Olivier_Troccaz">Olivier Troccaz</a>.
                                         </p>
@@ -151,10 +152,10 @@
 
                             </div> <!-- end col -->
                             <div class="col-lg-6 col-xl-4 d-flex">
-                                <div class="card w-100">
+                                <div class="card shadow-lg w-100">
                                     <div class="card-body">
                                         <h5 class="badge badge-primary badge-pill">Mode d'emploi</h5>
-                                        <!-- <p class="text-muted mb-2">
+                                        <!-- <p class=" mb-2">
                                             <ul class="list-group">
                                                 <li class="list-group-item">
                                                     <a href="https://halur1.univ-rennes1.fr/ExtrHAL-manuel-v2.pdf"><i class="mdi mdi-file-pdf-box-outline mr-1"></i> Télécharger le manuel</a>
@@ -174,10 +175,116 @@
                         <div class="row">
                             <div class="col-12 d-flex">
                                 <!-- project card -->
-                                <div class="card w-100 d-block">
+                                <div class="card w-100 d-block shadow-lg">
                                     <div class="card-body">
                                         
-                                        <h5 class="badge badge-primary badge-pill">Paramétrage</h5>
+                                        <h5 class="badge badge-primary badge-pill">Configuration</h5>
+                                        <div class="form-group row mb-1">
+                                            <label for="team" class="col-12 col-md-2 col-form-label font-weight-bold">
+                                            Enter your :
+                                            </label>
+                                            
+                                            <div class="col-12 col-md-10">
+                                                <div class="row mb-2">
+                                                    <div class="col-md-6 form-inline">
+                                                        <label for="preaut" class="d-block mr-2 w-50 font-weight-bold">First name : 
+                                                            <br> <span class="small text-primary">(including accents and special characters!)</span></label>
+                                                        <input type="text" id="preaut" name="preaut" class="form-control" value="" onkeydown="document.getElementById('idhal').value = '';">
+                                                    </div>
+                                                    <div class="col-md-6 form-inline">
+                                                        <label for="midaut" class="d-block mr-2 w-50 font-weight-bold">Middle name : 
+                                                            <br> <span class="small text-info">Optional</span>
+                                                            </label>
+                                                        <input type="text" id="midaut" name="midaut" class="form-control" value="" onkeydown="document.getElementById('idhal').value = '';">
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-6 form-inline">
+                                                        <label for="nomaut" class="d-block mr-2 w-50 font-weight-bold">Last name : 
+                                                            </label>
+                                                        <input type="text" id="nomaut" name="nomaut" class="form-control" value="" onkeydown="document.getElementById('idhal').value = '';">
+                                                    </div>
+                                                    <div class="col-md-6 form-inline">
+                                                        <label for="altaut" class="d-block mr-2 w-50 font-weight-bold">Alternate name : 
+                                                            <br> <span class="small text-info">Optional</span>
+                                                            </label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <button type="button" tabindex="0" class="btn btn-info" data-html="false" data-toggle="popover" data-trigger="focus" title="" data-content='eg. Maiden or hyphenated name' data-original-title="" data-placement="top">
+                                                                    <i class="mdi mdi-comment-question text-white"></i>
+                                                                    </button>
+                                                                </div>
+                                                        <input type="text" id="altaut" name="altaut" class="form-control" value="" onkeydown="document.getElementById('idhal').value = '';">
+                                                    </div>
+                                                        
+                                                    </div>
+                                                </div>
+
+                                                
+                                            </div>
+                                        </div> <!-- .form-group -->
+
+                                        <div class="form-group row mb-1">
+                                            <div class="col-12">
+                                                <h3 class="d-inline-block border-bottom border-primary text-primary">OR</h3>
+                                            </div>
+                                        </div> <!-- .form-group -->
+
+                                        <div class="form-group row mb-2">
+                                            <label for="idhal" class="col-12 col-md-2 col-form-label font-weight-bold">
+                                            Your idHAL if you have one:
+                                            </label>
+                                            
+                                            <div class="col-12 col-md-10">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <button type="button" tabindex="0" class="btn btn-info" data-html="false" data-toggle="popover" data-trigger="focus" title="" data-content='HAL personal identifier. (eg. Olivier Troccaz)' data-original-title="" data-placement="top">
+                                                        <i class="mdi mdi-comment-question text-white"></i>
+                                                        </button>
+                                                    </div>
+                                                    <input type="text" id="idhal" name="idhal" class="form-control"  value="" onclick="this.value='';" onkeydown="document.getElementById('idhal').value = ''; document.getElementById('evhal').value = '';">
+                                                <a class="ml-2 small" target="_blank" rel="noopener noreferrer" href="#1">Create your IdHAL</a>
+                                                </div>
+
+                                                
+                                            </div>
+                                        </div> <!-- .form-group -->
+
+                                        <div class="form-group row mb-1">
+                                            <div class="col-12 form-inline">
+                                                <label class="nameField" for="periode">Publication Date :&nbsp;</label>
+                                                <label for="anneedeb">From <i>(AAAA)</i>&nbsp;</label>
+                                                <input type="text" class="form-control mr-2" id="anneedeb" name="anneedeb" value="2015">
+                                                <label for="anneefin">To <i>(AAAA)</i>&nbsp;</label>
+                                                <input type="text" class="form-control" id="anneefin" name="anneefin" value="2020">
+                                            </div>
+                                        </div> <!-- .form-group -->
+
+                                        <div class="form-group row mb-2">
+                                            <div class="col-12 col-md-7 form-inline">
+                                                <label for="coll" class="mr-2">Your lab: </label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <button type="button" tabindex="0" class="btn btn-info" data-html="false" data-toggle="popover" data-trigger="focus" title="" data-content='optional but may be useful if you have namesakes (homonymes)' data-original-title="" data-placement="top">
+                                                        <i class="mdi mdi-comment-question text-white"></i>
+                                                        </button>
+                                                    </div>
+                                                    <select id="coll" class="form-control" size="1" name="coll" style="padding: 0px;">
+<option value=""></option>
+<option value="ARENES - Centre de recherches sur l'action politique en Europe (ARENES)">ARENES - Centre de recherches sur l'action politique en Europe (ARENES)</option><option value="Biosit - Structure Fédérative de Recherche en Biologie Santé">Biosit - Structure Fédérative de Recherche en Biologie Santé</option><option value="BRM - ARN régulateurs bactériens et médecine (BRM)">BRM - ARN régulateurs bactériens et médecine (BRM)</option><option value="CAPHI - Centre Atlantique de Philosophie (CAPHI)">CAPHI - Centre Atlantique de Philosophie (CAPHI)</option><option value="CDA - Centre de droit des affaires (CDA)">CDA - Centre de droit des affaires (CDA)</option><option value="CIC Rennes - Centre d'investigation clinique de Rennes">CIC Rennes - Centre d'investigation clinique de Rennes</option><option value="Comportement et noyaux gris centraux">Comportement et noyaux gris centraux</option><option value="COSS - Chemistry, Oncogenesis, Stress and Signaling (COSS)">COSS - Chemistry, Oncogenesis, Stress and Signaling (COSS)</option><option value="CReAAH - Centre de recherche en archéologie, archéosciences, histoire (CReAAH)">CReAAH - Centre de recherche en archéologie, archéosciences, histoire (CReAAH)</option><option value="CREM - Centre de recherche en économie et management (CREM)">CREM - Centre de recherche en économie et management (CREM)</option><option value="ECOBIO - Écosystèmes, biodiversité, évolution (ECOBIO)">ECOBIO - Écosystèmes, biodiversité, évolution (ECOBIO)</option><option value="EMPENN (ex VISAGES)">EMPENN (ex VISAGES)</option><option value="EthoS - Éthologie animale et humaine (EthoS)">EthoS - Éthologie animale et humaine (EthoS)</option><option value="FOTON - Fonctions optiques pour les technologies de l'information (FOTON)">FOTON - Fonctions optiques pour les technologies de l'information (FOTON)</option><option value="Géoarchitecture - EA 7462 - Géoarchitecture : Territoires, Urbanisation, Biodiversité, Environnement">Géoarchitecture - EA 7462 - Géoarchitecture : Territoires, Urbanisation, Biodiversité, Environnement</option><option value="Géosciences Rennes">Géosciences Rennes</option><option value="IDPSP -Institut du droit public et de la science politique (IDPSP)">IDPSP -Institut du droit public et de la science politique (IDPSP)</option><option value="IETR - Institut d'électronique et de télécommunications de Rennes (IETR)">IETR - Institut d'électronique et de télécommunications de Rennes (IETR)</option><option value="IGDR - Institut de génétique et développement de Rennes (IGDR)">IGDR - Institut de génétique et développement de Rennes (IGDR)</option><option value="IGEPP - Institut de génétique, environnement et protection des plantes (IGEPP)">IGEPP - Institut de génétique, environnement et protection des plantes (IGEPP)</option><option value="IODE - Institut de l'Ouest : droit et Europe (IODE)">IODE - Institut de l'Ouest : droit et Europe (IODE)</option><option value="IPR - Institut de physique de Rennes (IPR)">IPR - Institut de physique de Rennes (IPR)</option><option value="IRISA - Institut de recherche en informatique et systèmes aléatoires (IRISA)">IRISA - Institut de recherche en informatique et systèmes aléatoires (IRISA)</option><option value="IRMAR - Institut de recherche mathématique de Rennes (IRMAR)">IRMAR - Institut de recherche mathématique de Rennes (IRMAR)</option><option value="Irset - Institut de recherche en santé, environnement et travail (IRSET)">Irset - Institut de recherche en santé, environnement et travail (IRSET)</option><option value="ISCR - Institut des sciences chimiques de Rennes (ISCR)">ISCR - Institut des sciences chimiques de Rennes (ISCR)</option><option value="LGCGM - Laboratoire de génie civil et génie mécanique (LGCGM)">LGCGM - Laboratoire de génie civil et génie mécanique (LGCGM)</option><option value="LTSI - Laboratoire traitement du signal et de l'image (LTSI)">LTSI - Laboratoire traitement du signal et de l'image (LTSI)</option><option value="M2S - Laboratoire mouvement, sport et santé (M2S)">M2S - Laboratoire mouvement, sport et santé (M2S)</option><option value="MICMAC - Microenvironment, Cell Differentiation, Immunology and Cancer (MICMAC)">MICMAC - Microenvironment, Cell Differentiation, Immunology and Cancer (MICMAC)</option><option value="NUMECAN - Nutrition, Métabolismes et Cancer (NUMECAN)">NUMECAN - Nutrition, Métabolismes et Cancer (NUMECAN)</option><option value="OSUR - Observatoire des Sciences de l'Univers de Rennes (OSUR)">OSUR - Observatoire des Sciences de l'Univers de Rennes (OSUR)</option><option value="Repères - Recherche en Pharmaco-épidémiologie et Recours aux Soins (Repères)">Repères - Recherche en Pharmaco-épidémiologie et Recours aux Soins (Repères)</option></select>
+                                                </div>
+
+                                                
+                                            </div>
+                                            <div class="col-12 col-md-4 form-inline">
+     
+                                                <label for="coll2">and/or your HAL collection code : </label>
+                                                <input type="text" id="coll2" name="coll2" class="form-control" value="">
+                                                
+                                            </div>
+                                        </div> <!-- .form-group -->
+
 
 
 
@@ -191,7 +298,7 @@
 
                         <div class="row">
                             <div class="col-12 d-flex">
-                                <div class="card w-100">
+                                <div class="card shadow-lg w-100">
                                     <div class="card-body">
                                     </div>
                                     
@@ -232,7 +339,7 @@
             <!-- End Page content -->
             <!-- ============================================================== -->
 
-
+<button id="scrollBackToTop" class="btn btn-primary"><i class="mdi mdi-24px text-white mdi-chevron-double-up"></i></button>
         </div>
         <!-- END wrapper -->
 
@@ -246,6 +353,27 @@
         <script src="assets/js/vendor/Chart.bundle.min.js"></script>
         <!-- third party js ends -->
         <script src="assets/js/pages/hal-ur1.chartjs.js"></script>
+
+        <script type="text/javascript">
+            (function($) {
+                'use strict';
+
+                $(document).scroll(function() {
+                  var y = $(this).scrollTop();
+                  if (y > 200) {
+                    $('#scrollBackToTop').fadeIn();
+                  } else {
+                    $('#scrollBackToTop').fadeOut();
+                  }
+                });
+                $('#scrollBackToTop').each(function(){
+                    $(this).click(function(){ 
+                        $('html,body').animate({ scrollTop: 0 }, 'slow');
+                        return false; 
+                    });
+                });
+            })(window.jQuery)
+        </script>
         
 
         <!-- third party js -->

@@ -57,8 +57,8 @@
                        
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle arrow-none" href="croshal.html" id="topnav-crosshal" role="button">
-                                                <i class="mdi mdi-label-multiple text-primary mr-1"></i>Cros<span class="font-weight-bold">HAL</span> 
+                                            <a class="nav-link dropdown-toggle arrow-none" href="crosshal.html" id="topnav-crosshal" role="button">
+                                                <i class="mdi mdi-label-multiple text-primary mr-1"></i>Cross<span class="font-weight-bold">HAL</span> 
                                             </a>
                                         </li>
                                         <li class="nav-item dropdown">
@@ -82,7 +82,7 @@
 
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle arrow-none" href="zip2hal.html" id="topnav-myhal" role="button">
-                                                <i class="mdi mdi mdi-account-card-details text-primary mr-1"></i>Zip2<span class="font-weight-bold">HAL</span> 
+                                                <i class="mdi mdi mdi-folder-zip-outline text-primary mr-1"></i>Zip2<span class="font-weight-bold">HAL</span> 
                                             </a>
                                         </li>
                                         <!-- <li class="nav-item dropdown">
@@ -130,19 +130,20 @@
                         <div class="row">
                             <div class="col-xl-8 col-lg-6 d-flex">
                                 <!-- project card -->
-                                <div class="card d-block w-100">
+                                <div class="card d-block w-100 shadow-lg">
                                     <div class="card-body">
                                         
                                         <!-- project title-->
                                         <h2 class="h1 mt-0">
+                                            <i class="mdi mdi-chart-bar-stacked text-primary"></i>
                                             <span class="font-weight-light">Vizu</span><span class="text-primary">HAL</span>
                                         </h2>
                                         <h5 class="badge badge-primary badge-pill">Présentation</h5>
 
-                                        <p class="text-muted mb-2">
+                                        <p class=" mb-2">
                                            VizuHAL permet de générer des tableaux et graphes statistiques à partir de HAL (collection ou portail).
                                        </p>
-                                       <p class="text-muted mb-2">
+                                       <p class=" mb-2">
 
                                         Entrez un code collection OU sélectionnez un portail dans la liste déroulante, puis sélectionnez votre requête.<br>
                                                             Attention : certaines requêtes ne sont valides que pour une collection ou un portail.
@@ -155,10 +156,10 @@
 
                             </div> <!-- end col -->
                             <div class="col-lg-6 col-xl-4 d-flex">
-                                <div class="card w-100">
+                                <div class="card shadow-lg w-100">
                                     <div class="card-body">
                                         <h5 class="badge badge-primary badge-pill">Mode d'emploi</h5>
-                                        <!-- <p class="text-muted mb-2">
+                                        <!-- <p class=" mb-2">
                                             <ul class="list-group">
                                                 <li class="list-group-item">
                                                     <a href="https://halur1.univ-rennes1.fr/ExtrHAL-manuel-v2.pdf"><i class="mdi mdi-file-pdf-box-outline mr-1"></i> Télécharger le manuel</a>
@@ -178,11 +179,88 @@
                         <div class="row">
                             <div class="col-12 d-flex">
                                 <!-- project card -->
-                                <div class="card w-100 d-block">
+                                <div class="card w-100 d-block shadow-lg">
                                     <div class="card-body">
                                         
                                         <h5 class="badge badge-primary badge-pill">Paramétrage</h5>
 
+                                         <div class="form-group row mb-1">
+                                                <label for="team" class="col-12 col-md-2 col-form-label font-weight-bold">
+                                                Code collection HAL :
+                                                </label>
+                                                
+                                                <div class="col-12 col-md-10">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <button type="button" tabindex="0" class="btn btn-info" data-html="true" data-toggle="popover" data-trigger="focus" title="" data-content='Code visible dans l’URL d’une collection.
+                                            Exemple : IPR-MOL est le code de la collection http://hal.archives-ouvertes.fr/ <span class="font-weight-bold">IPR-PMOL</span> de l’équipe Physique moléculaire de l’unité IPR UMR CNRS 6251' data-original-title="">
+                                                            <i class="mdi mdi-comment-question text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <input type="text" id="team" name="team" class="form-control"  value="" onclick="this.value='';" onkeydown="document.getElementById('idhal').value = ''; document.getElementById('evhal').value = '';">
+                                                    <a class="ml-2 small" target="_blank" rel="noopener noreferrer" href="https://hal-univ-rennes1.archives-ouvertes.fr/page/codes-collections">Trouver le code<br>de mon équipe / labo</a>
+                                                    </div>
+
+                                                    
+                                                </div>
+                                            </div> <!-- .form-group -->
+
+                                            <div class="form-group row mb-1">
+                                                <div class="col-12">
+                                                    <h3 class="d-inline-block border-bottom border-primary text-primary">OU</h3>
+                                                </div>
+                                            </div> <!-- .form-group -->
+
+                                            <div class="form-inline mb-2">
+                                                 <label class="font-weight-bold pt-0 mr-2" for="port">Portail HAL :</label>
+                                                 <select id="port" class="form-control" size="1" name="port" onchange="document.getElementById('team').value = '';">
+                                                    <option value="choix">Veuillez choisir parmi la liste</option>
+                                                    <option value="HAL-RENNES1">HAL-RENNES1</option><option value="HAL-TEST">HAL-TEST</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-inline mb-2">
+                                                 <label class="font-weight-bold pt-0 mr-2" for="reqt">Extraction souhaitée : </label>
+                                                 <select id="reqt" class="form-control" size="1" name="reqt" onchange="freqt();">
+                                                    <!--<option value="tabg">Tableau de bord général</option>-->
+                                                    <option value="req1" selected="">1. Portail : production scientifique par secteur et par unité</option>
+                                                    <option value="req24">1A. Portail : production scientifique par secteur et par unité (Articles de revue)</option>
+                                                    <option value="req2">2. Portail ou collection : évolution sur une période</option>
+                                                    <option value="req3">3. Portail : Comparaison portails</option>
+                                                    <option value="req4">4. Portail : ESGBU (stocks et flux)</option>
+                                                    <option value="req5">5. Portail ou Collection : Nombre de publications de type articles par éditeur</option>
+                                                    <option value="req6">6. Portail ou Collection : Nombre de publications de type communications par éditeur</option>
+                                                    <option value="req7">7. Portail ou Collection : Nombre de publications (articles de revue) par revue</option>
+                                                    <!--
+                                                    <option value="req8">8. Portail : Pourcentage par secteur des articles de tel éditeur</option>
+                                                    <option value="req9">9. Portail : Pourcentage par éditeur des articles de tel secteur</option>
+                                                    -->
+                                                    <option value="req10">10. Collection : Nombre d'articles sans texte intégral déposé dans HAL par éditeur</option>
+                                                    <option value="req11">11. Collection : Nombre d'articles avec texte intégral déposé dans HAL par éditeur</option>
+                                                    <option value="req12">12. Collection : Nombre d'articles avec texte intégral déposé dans HAL OU lien externe vers PDF en open access par éditeur</option>
+                                                    <option value="req13">13. Portail ou collection : évolution sur une et trois années</option>
+                                                    <option value="req14">14. Collection : Nombre de projets ANR</option>
+                                                    <option value="req15">15. Collection : Nombre de projets européens</option>
+                                                    <option value="req16">16. Collection : Profil des contributeurs HAL</option>
+                                                    <option value="req17">17. Collection : Collaborations nationales</option>
+                                                    <option value="req18">18. Collection : Collaborations nationales (laboratoires)</option>
+                                                    <option value="req19">19. Collection : Collaborations nationales (établissements)</option>
+                                                    <option value="req20">20. Collection : Collaborations nationales (autres)</option>
+                                                    <option value="req21">21. Collection : Collaborations internationales (toutes structures)</option>
+                                                    <option value="req22">22. Collection : Collaborations internationales (institutions)</option>
+                                                    <option value="req23">23. Collection : Collaborations internationales (pays)</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-inline mb-2">
+                                                 <label class="font-weight-bold pt-0 mr-2" for="annee1">Portail HAL :</label>
+                                                 <select id="annee1" class="form-control" name="annee1">
+<option value="2021" selected="">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option></select>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <input type="submit" class="btn btn-md btn-primary" value="Valider" name="valider">
+                                            </div>
 
 
                                     </div> <!-- end card-body-->
@@ -195,8 +273,17 @@
 
                         <div class="row">
                             <div class="col-12 d-flex">
-                                <div class="card w-100">
+                                <div class="card shadow-lg w-100">
                                     <div class="card-body">
+                                        <h3 class="font-weight-normal">
+                                            <span class="badge badge-primary badge-pill">1. Portail : production scientifique par secteur et par unité</span>
+                                        </h3>
+                                        <div class="alert alert-secondary small">
+                                            Cette requête présente, pour une année donnée, le nombre de publications référencées dans le portail HAL institutionnel, avec ou sans texte intégral, avec ou sans lien vers un PDF librement disponible hors de HAL (via Unpaywall). Les résultats sont déclinés par secteurs (le cas échéant), et par unités ou structures de recherche. Voir détails techniques en bas de page.
+                                        </div>
+                                        <table class="table table-striped table-hover table-responsive table-bordered"><thead><tr><th scope="col">Unité</th><th scope="col">Secteur</th><th scope="col">Productions 2021</th><th scope="col"></th><th scope="col">Productions 2021 sans texte intégral déposé dans HAL</th><th scope="col"></th><th scope="col">Productions 2021 avec texte intégral déposé dans HAL</th><th scope="col"></th><th scope="col">Productions 2021 sans texte intégral déposé dans HAL mais avec texte intégral déposé dans HAL librement accessible hors HAL</th><th scope="col"></th><th scope="col">Productions 2021 avec texte intégral déposé dans HAL ou librement accessible hors HAL</th><th scope="col"></th></tr></thead><tbody><tr class="warning"><th scope="row">IRSET</th><th scope="row"></th><th scope="row" style="text-align:center">0</th><th scope="row" style="text-align:center">0%</th><th scope="row" style="text-align:center">0</th><th scope="row" style="text-align:center">0%</th><th scope="row" style="text-align:center">0</th><th scope="row" style="text-align:center">0%</th><th scope="row" style="text-align:center">0</th><th scope="row" style="text-align:center">0%</th><th scope="row" style="text-align:center">0</th><th scope="row" style="text-align:center">0%</th></tr></tbody></table>
+
+                                        <a class="btn btn-secondary mt-2" href="#1">Exporter le tableau au format CSV</a>
                                     </div>
                                     
                                 </div>
@@ -236,7 +323,7 @@
             <!-- End Page content -->
             <!-- ============================================================== -->
 
-
+<button id="scrollBackToTop" class="btn btn-primary"><i class="mdi mdi-24px text-white mdi-chevron-double-up"></i></button>
         </div>
         <!-- END wrapper -->
 
@@ -250,6 +337,27 @@
         <script src="assets/js/vendor/Chart.bundle.min.js"></script>
         <!-- third party js ends -->
         <script src="assets/js/pages/hal-ur1.chartjs.js"></script>
+
+        <script type="text/javascript">
+            (function($) {
+                'use strict';
+
+                $(document).scroll(function() {
+                  var y = $(this).scrollTop();
+                  if (y > 200) {
+                    $('#scrollBackToTop').fadeIn();
+                  } else {
+                    $('#scrollBackToTop').fadeOut();
+                  }
+                });
+                $('#scrollBackToTop').each(function(){
+                    $(this).click(function(){ 
+                        $('html,body').animate({ scrollTop: 0 }, 'slow');
+                        return false; 
+                    });
+                });
+            })(window.jQuery)
+        </script>
         
 
         <!-- third party js -->

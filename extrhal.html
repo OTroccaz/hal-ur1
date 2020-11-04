@@ -22,7 +22,17 @@
 
     </head>
 
+
     <body class="loading" data-layout="topnav" >
+
+        <!-- Pre-loader -->
+        <div id="preloader">
+            <div id="status">
+                <div class="bouncing-loader"><div ></div><div ></div><div ></div></div>
+                <div class="text-center text-primary">Chargement en cours, veuillez patienter</div>
+            </div>
+        </div>
+        <!-- End Preloader-->
         
         <!-- Begin page -->
         <div class="wrapper">
@@ -57,8 +67,8 @@
                        
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle arrow-none" href="croshal.html" id="topnav-crosshal" role="button">
-                                                <i class="mdi mdi-label-multiple text-primary mr-1"></i>Cros<span class="font-weight-bold">HAL</span> 
+                                            <a class="nav-link dropdown-toggle arrow-none" href="crosshal.html" id="topnav-crosshal" role="button">
+                                                <i class="mdi mdi-label-multiple text-primary mr-1"></i>Cross<span class="font-weight-bold">HAL</span> 
                                             </a>
                                         </li>
                                         <li class="nav-item dropdown">
@@ -130,20 +140,23 @@
                         <div class="row">
                             <div class="col-xl-8 col-lg-6 d-flex">
                                 <!-- project card -->
-                                <div class="card d-block w-100">
+                                <div class="card d-block w-100 shadow-lg">
                                     <div class="card-body">
                                         
                                         <!-- project title-->
                                         <h2 class="h1 mt-0">
+                                            <i class="mdi mdi-file-export-outline text-primary"></i>
                                             <span class="font-weight-light">Extr</span><span class="text-primary">HAL</span>
                                         </h2>
                                         <h5 class="badge badge-primary badge-pill">Présentation</h5>
 
-                                        <p class="text-muted mb-2">
+                                        <img src="assets/images/test-big-img.jpg" class="img-fluid">
+
+                                        <p class=" mb-2">
                                             ExtrHAL permet d’afficher et d’exporter en RTF, CSV et/ou Bibtex des listes de publications HAL d’une unité, d'une équipe de recherche ou d'un auteur, à partir d’un script PHP créé par Philippe Gambette, repris et modifié par Olivier Troccaz (ECOBIO - OSUR) pour l’Université de Rennes 1. 
                                         </p>
 
-                                        <p class="text-muted mb-4">
+                                        <p class=" mb-4">
                                             Pour tout renseignement, n'hésitez pas à contacter <a href="https://openaccess.univ-rennes1.fr/interlocuteurs/laurent-jonchere">Laurent Jonchère</a> ou <a href="https://ecobio.univ-rennes1.fr/personnel.php?qui=Olivier_Troccaz">Olivier Troccaz</a>.
                                             Si vous souhaitez utiliser et adapter ExtrHAL pour une autre institution, consultez le <a href="https://wiki.ccsd.cnrs.fr/wikis/hal/index.php/Outils_et_services_d%C3%A9velopp%C3%A9s_localement_pour_am%C3%A9liorer_ou_faciliter_l%27utilisation_de_HAL#Extraction_et_mise_en_forme_des_publications">wiki du CCSD</a>.
                                         </p>
@@ -155,10 +168,10 @@
 
                             </div> <!-- end col -->
                             <div class="col-lg-6 col-xl-4 d-flex">
-                                <div class="card w-100">
+                                <div class="card shadow-lg w-100">
                                     <div class="card-body">
                                         <h5 class="badge badge-primary badge-pill">Mode d'emploi</h5>
-                                        <p class="text-muted mb-2">
+                                        <p class=" mb-2">
                                             <ul class="list-group">
                                                 <li class="list-group-item">
                                                     <a href="https://halur1.univ-rennes1.fr/ExtrHAL-manuel-v2.pdf"><i class="mdi mdi-file-pdf-box-outline mr-1"></i> Télécharger le manuel</a>
@@ -178,7 +191,7 @@
                         <div class="row">
                             <div class="col-12 d-flex">
                                 <!-- project card -->
-                                <div class="card w-100 d-block">
+                                <div class="card w-100 d-block shadow-lg">
                                     <div class="card-body">
                                         
                                         <h5 class="badge badge-primary badge-pill">Paramétrage</h5>
@@ -192,7 +205,7 @@
                                                 <div class="col-12 col-md-9">
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
-                                                            <button type="button" tabindex="0" class="btn btn-secondary" data-html="true" data-toggle="popover" title="" data-content='Code visible dans l’URL d’une collection.
+                                                            <button type="button" tabindex="0" class="btn btn-info" data-html="true" data-toggle="popover" data-trigger="focus" title="" data-content='Code visible dans l’URL d’une collection.
                                             Exemple : IPR-MOL est le code de la collection http://hal.archives-ouvertes.fr/ <span class="font-weight-bold">IPR-PMOL</span> de l’équipe Physique moléculaire de l’unité IPR UMR CNRS 6251' data-original-title="">
                                                             <i class="mdi mdi-comment-question text-white"></i>
                                                             </button>
@@ -218,7 +231,7 @@
                                                 <div class="col-12 col-md-9">
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
-                                                            <button type="button" tabindex="0" class="btn btn-secondary" data-html="true" data-toggle="popover" title="" data-content="Champ référence interne des dépôts HAL" data-original-title="">
+                                                            <button type="button" tabindex="0" class="btn btn-info" data-html="true" data-toggle="popover" data-trigger="focus" title="" data-content="Champ référence interne des dépôts HAL" data-original-title="">
                                                             <i class="mdi mdi-comment-question text-white"></i>
                                                             </button>
                                                         </div>
@@ -237,7 +250,7 @@
                                                 <div class="col-12 col-md-9">
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
-                                                            <button type="button" tabindex="0" class="btn btn-secondary" data-html="true" data-toggle="popover" title="Exemple" data-content="Indiquez ici le code collection de votre labo ou de votre équipe, selon que vous souhaitez mettre en évidence le nom des auteurs du labo ou de l'équipe." data-original-title="">
+                                                            <button type="button" tabindex="0" class="btn btn-info" data-html="true" data-toggle="popover" data-trigger="focus" title="Exemple" data-content="Indiquez ici le code collection de votre labo ou de votre équipe, selon que vous souhaitez mettre en évidence le nom des auteurs du labo ou de l'équipe." data-original-title="">
                                                             <i class="mdi mdi-comment-question text-white"></i>
                                                         </button>
                                                     </div>
@@ -263,7 +276,7 @@
                                                 <div class="col-12 col-md-9">
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
-                                                            <button type="button" tabindex="0" class="btn btn-secondary" data-html="true" data-toggle="popover" title="Pour une requête sur plusieurs IdHAL" data-content="Mettre entre parenthèses, et remplacer les guillemets par %22 et les espaces par %20. Exemple : <strong>(%22laurent-jonchere%22%20OR%20%22olivier-troccaz%22)" data-original-title="">
+                                                            <button type="button" tabindex="0" class="btn btn-info" data-html="true" data-toggle="popover" data-trigger="focus" title="Pour une requête sur plusieurs IdHAL" data-content="Mettre entre parenthèses, et remplacer les guillemets par %22 et les espaces par %20. Exemple : <strong>(%22laurent-jonchere%22%20OR%20%22olivier-troccaz%22)" data-original-title="">
                                                             <i class="mdi mdi-comment-question text-white"></i>
                                                             </button>
                                                         </div>
@@ -276,7 +289,7 @@
                                                 </div>
                                             </div><!-- .form-group -->
 
-                                            <div class="form-group row mb-1">
+                                            <div class="form-group row mb-4">
                                                 <label for="evhal" class="col-12 col-md-3 col-form-label font-weight-bold pt-0">
                                                 Auteur correspondant à l'IdHAL à mettre en évidence
                                                 </label>
@@ -284,7 +297,7 @@
                                                 <div class="col-12 col-md-9">
                                                     <div class="input-group">
                                                         <div class="input-group-prepend">
-                                                            <button type="button" tabindex="0" class="btn btn-secondary" data-html="true" data-toggle="popover" title="Pour une requête sur plusieurs IdHAL" data-content="Indiquez ici le code collection de votre labo ou de votre équipe, selon que vous souhaitez mettre en évidence le nom des auteurs du labo ou de l'équipe." data-original-title="">
+                                                            <button type="button" tabindex="0" class="btn btn-info" data-html="true" data-toggle="popover" data-trigger="focus" title="Pour une requête sur plusieurs IdHAL" data-content="Indiquez ici le code collection de votre labo ou de votre équipe, selon que vous souhaitez mettre en évidence le nom des auteurs du labo ou de l'équipe." data-original-title="">
                                                             <i class="mdi mdi-comment-question text-white"></i>
                                                         </button>
                                                     </div>
@@ -299,9 +312,9 @@
                                                 <div class="col-12">
                                                     <div class="accordion" id="accordionChoix">
                                                         <div class="card mb-0">
-                                                            <div class="card-header bg-warning-soft" id="headingOne">
+                                                            <div class="card-header" id="headingOne">
                                                                 <h5 class="m-0">
-                                                                    <a class="custom-accordion-title d-block"
+                                                                    <a class="custom-accordion-title collapsed d-block"
                                                                         data-toggle="collapse" href="#collapseOne"
                                                                         aria-expanded="true" aria-controls="collapseOne">
                                                                         Choix des listes de publications à afficher
@@ -312,7 +325,7 @@
                                                             <div id="collapseOne" class="collapse"
                                                                 aria-labelledby="headingOne" data-parent="#accordionChoix">
                                                                 <div class="card-body">
-                                                                   <div class="form-group row mb-1">
+                                                                   <div class="form-group row">
                                                                         <label for="singledaterange1" class="col-12 col-md-3 col-form-label font-weight-bold pt-0">
                                                                         Période
                                                                         </label>
@@ -343,7 +356,7 @@
                                                                         <div class="col-12 col-md-9">
                                                                             <div class="input-group select-help">
                                                                                 <div class="input-group-prepend">
-                                                                                    <button type="button" tabindex="0" class="btn btn-secondary" data-html="true" data-toggle="popover" title="" data-content="<a target='_blank' href='./ExtrHAL-criteres-types-publis.pdf'>Quels champs compléter dans HAL ?</a>" data-original-title="">
+                                                                                    <button type="button" tabindex="0" class="btn btn-info" data-html="true" data-toggle="popover" data-trigger="focus" title="" data-content="<a target='_blank' href='./ExtrHAL-criteres-types-publis.pdf'>Quels champs compléter dans HAL ?</a>" data-original-title="">
                                                                                     <i class="mdi mdi-comment-question text-white"></i>
                                                                                     </button>
                                                                                 </div>
@@ -372,7 +385,7 @@
                                                                         <div class="col-12 col-md-9">
                                                                             <div class="input-group select-help">
                                                                                 <div class="input-group-prepend">
-                                                                                    <button type="button" tabindex="0" class="btn btn-secondary" data-html="true" data-toggle="popover" title="" data-content="<a target='_blank' href='./ExtrHAL-criteres-types-publis.pdf'>Quels champs compléter dans HAL ?</a>" data-original-title="">
+                                                                                    <button type="button" tabindex="0" class="btn btn-info" data-html="true" data-toggle="popover" data-trigger="focus" title="" data-content="<a target='_blank' href='./ExtrHAL-criteres-types-publis.pdf'>Quels champs compléter dans HAL ?</a>" data-original-title="">
                                                                                     <i class="mdi mdi-comment-question text-white"></i>
                                                                                     </button>
                                                                                 </div>
@@ -416,7 +429,7 @@
                                                                         <div class="col-12 col-md-9">
                                                                             <div class="input-group select-help">
                                                                                 <div class="input-group-prepend">
-                                                                                    <button type="button" tabindex="0" class="btn btn-secondary" data-html="true" data-toggle="popover" title="" data-content="<a target='_blank' href='./ExtrHAL-criteres-types-publis.pdf'>Quels champs compléter dans HAL ?</a>" data-original-title="">
+                                                                                    <button type="button" tabindex="0" class="btn btn-info" data-html="true" data-toggle="popover" data-trigger="focus" title="" data-content="<a target='_blank' href='./ExtrHAL-criteres-types-publis.pdf'>Quels champs compléter dans HAL ?</a>" data-original-title="">
                                                                                     <i class="mdi mdi-comment-question text-white"></i>
                                                                                     </button>
                                                                                 </div>
@@ -456,7 +469,7 @@
                                                                         <div class="col-12 col-md-9">
                                                                             <div class="input-group select-help">
                                                                                 <div class="input-group-prepend">
-                                                                                    <button type="button" tabindex="0" class="btn btn-secondary" data-html="true" data-toggle="popover" title="" data-content="<a target='_blank' href='./ExtrHAL-criteres-types-publis.pdf'>Quels champs compléter dans HAL ?</a>" data-original-title="">
+                                                                                    <button type="button" tabindex="0" class="btn btn-info" data-html="true" data-toggle="popover" data-trigger="focus" title="" data-content="<a target='_blank' href='./ExtrHAL-criteres-types-publis.pdf'>Quels champs compléter dans HAL ?</a>" data-original-title="">
                                                                                     <i class="mdi mdi-comment-question text-white"></i>
                                                                                     </button>
                                                                                 </div>
@@ -485,11 +498,11 @@
                                                             </div>
                                                         </div>
                                                         <div class="card mb-0">
-                                                            <div class="card-header bg-info-soft" id="headingTwo">
+                                                            <div class="card-header" id="headingTwo">
                                                                 <h5 class="m-0">
-                                                                    <a class="custom-accordion-title collapsed d-block"
+                                                                    <a class="custom-accordion-title d-block collapsed"
                                                                         data-toggle="collapse" href="#collapseTwo"
-                                                                        aria-expanded="false" aria-controls="collapseTwo">
+                                                                        aria-expanded="true" aria-controls="collapseTwo">
                                                                         Options d'affichage et d'export
                                                                     </a>
                                                                 </h5>
@@ -497,239 +510,455 @@
                                                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                                                                 data-parent="#accordionChoix">
                                                                 <div class="card-body">
-                                                                    <div class="form-group row mb-1">
-                                                                        <label for="typnum" class="col-12 col-md-2 col-form-label font-weight-bold text-right">
-                                                                        Numérotation
-                                                                        </label>
-                                                                        <div class="col-12 col-md-2 border-right">
-                                                                            <div class="custom-control custom-radio">
-                                                                                <input type="radio" id="typnum1" name="typnum" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typnum1">visible et continue </label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio">
-                                                                                <input type="radio" id="typnum3" name="typnum" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typnum3">visible et discontinue </label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio">
-                                                                                <input type="radio" id="typnum2" name="typnum" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typnum2">invisible </label>
-                                                                            </div>
+                                                                    <div class="form-group row border border-gray-300 border-2 rounded p-2 mb-3">
+                                                                        <div class="form-group col-sm-4">
+                                                                            <label for="typnum" class="font-weight-bold">
+                                                                            Numérotation
+                                                                            </label>
+                                                                            <select class="form-control" id="typnum" name="typnum">
+                                                                                <option value="1">visible et continue</option>
+                                                                                <option value="2">visible et discontinue</option>
+                                                                                <option value="3">invisible</option>
+                                                                            </select>
                                                                         </div>
 
-                                                                        <label for="typnum" class="col-12 col-md-2 col-form-label font-weight-bold text-right">
-                                                                        Classer par
-                                                                        </label>
-                                                                        <div class="col-12 col-md-2 border-right">
-                                                                            <div class="custom-control custom-radio">
-                                                                                <input type="radio" id="typtri1" name="typtri" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typtri1">année puis nom du premieur auteur </label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio">
-                                                                                <input type="radio" id="typtri2" name="typtri" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typtri2">année puis journal </label>
-                                                                            </div>
+                                                                        <div class="form-group col-sm-4">
+                                                                            <label for="typtri" class="font-weight-bold">
+                                                                            Classer par
+                                                                            </label>
+                                                                            <select class="form-control" id="typtri" name="typtri">
+                                                                                <option value="1">année puis nom du premieur auteur</option>
+                                                                                <option value="2">année puis journal</option>
+                                                                            </select>
                                                                         </div>
 
-                                                                        <label for="typnum" class="col-12 col-md-2 col-form-label font-weight-bold text-right">
-                                                                        Années
-                                                                        </label>
-                                                                        <div class="col-12 col-md-2">
-                                                                            <div class="custom-control custom-radio">
-                                                                                <input type="radio" id="typchr1" name="typchr" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typchr1">décroissantes</label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio">
-                                                                                <input type="radio" id="typchr2" name="typchr" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typchr2">croissantes </label>
-                                                                            </div>
+                                                                        <div class="form-group col-sm-4">
+                                                                            <label for="typchr" class="font-weight-bold">
+                                                                            Années
+                                                                            </label>
+                                                                            <select class="form-control" id="typchr" name="typchr">
+                                                                                <option value="1">décroissantes</option>
+                                                                                <option value="2">croissantes</option>
+                                                                            </select>
                                                                         </div>
+
                                                                     </div><!-- .form-group -->
 
-                                                                    <div class="form-group row mb-1 border-bottom">
-                                                                    </div>
+                                                                    <div class="form-group row border border-gray-300 border-2 rounded p-2 mb-3">
 
-                                                                    <div class="form-group row mb-2">
-                                                                        
-                                                                        <div class="col-12 ">
-                                                                            <label for="typaut" class="font-weight-bold text-right d-inline-block">
+                                                                        <div class="form-group col-sm-4">
+                                                                            <label for="typaut" class="font-weight-bold">
                                                                             Auteurs (tous) 
                                                                             </label>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut1" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut1">soulignés</label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut2" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut2">gras </label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut3" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut3">aucuns </label>
-                                                                            </div>
+                                                                            <select class="form-control" id="typaut" name="typaut">
+                                                                                <option value="1">soulignés</option>
+                                                                                <option value="2">gras</option>
+                                                                                <option value="3">aucuns</option>
+                                                                            </select>
                                                                         </div>
 
+                                                                        <div class="form-group col-sm-4">
+                                                                            <label for="typnom" class="font-weight-bold">
+                                                                            Auteurs (tous) 
+                                                                            </label>
+                                                                            <select class="form-control" id="typnom" name="typnom">
+                                                                                <option value="1">Nom, initiale(s) du(des) prénom(s)</option>
+                                                                                <option value="2">Nom Prénom(s)</option>
+                                                                                <option value="3">Prénom(s) Nom</option>
+                                                                                <option value="3">NOM (Prénom(s))</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div class="form-group col-sm-4">
+                                                                            <label for="typcol" class="font-weight-bold">
+                                                                            Auteurs (de la collection) ou auteur IdHAL
+                                                                            </label>
+                                                                            <select class="form-control" id="typcol" name="typcol">
+                                                                                <option value="1">soulignés</option>
+                                                                                <option value="2">gras</option>
+                                                                                <option value="3">>aucuns</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        
                                                                     </div> <!-- .form-group -->
 
-                                                                    <div class="form-group row mb-2">
+
+
+                                                                    <div class="form-group row border border-gray-300 border-2 rounded p-2 mb-3">
+
+                                                                        <div class="form-group col-sm-4">
+                                                                            <div class="form-group row">
+                                                                                <label for="typbib" class="col-sm-7">
+                                                                                Mettre en évidence (\labo{xxxxx}) les auteurs de la collection dans l'export Bibtex
+                                                                                </label>
+                                                                               
+                                                                                <div class="col-sm-5">
+                                                                                    <div class="custom-control custom-radio d-inline-block mr-2">
+                                                                                        <input type="radio" id="typbib1" name="typbib" class="custom-control-input">
+                                                                                        <label class="custom-control-label" for="typbib1">oui</label>
+                                                                                    </div>
+                                                                                    <div class="custom-control custom-radio d-inline-block">
+                                                                                        <input type="radio" id="typbib2" name="typbib" class="custom-control-input" checked>
+                                                                                        <label class="custom-control-label" for="typbib2">non </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                        </div> <!-- .form-group -->
+
+                                                                        <div class="form-group col-sm-4">
+                                                                            <div class="form-group row">
+                                                                                <label for="limaff1" class="col-sm-6">
+                                                                                Limiter l’affichage aux
+                                                                                </label>
+                                                                                <div class="col-sm-6">
+                                                                                <select id="limaff1" class="form-control" size="1" name="limaff">
+                                                                                    <option value="1">1</option><option value="5" selected="">5</option>
+                                                                                    <option value="10">10</option>
+                                                                                    <option value="15">15</option>
+                                                                                    <option value="20">20</option>                         
+                                                                                </select>
+                                                                                premier(s) auteur(s) (« et al. ») 
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- .form-group -->
+
+                                                                        <div class="form-group col-sm-4">
+                                                                            <div class="form-group row">
+                                                                                <label for="trpaff" class="col-sm-8">
+                                                                                Remplacer les auteurs hors collection par '...' au-delà de  
+                                                                                </label>
+                                                                                <div class="col-sm-4">
+                                                                                <input id="trpaff" class="form-control" type="text" name="trpaff" value="" >
+                                                                                    auteur(s) 
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- .form-group -->
+
+                                                                    </div><!-- .form-group -->
+
+                                                                    <div class="form-group row  border border-gray-300 border-2 rounded p-2 mb-3">
+
+                                                                        <div class="form-group col-sm-6">
+                                                                            <div class="form-group row">
+                                                                                <label for="typgra" class="col-sm-7">
+                                                                                Mettre la citation en gras si auteurs de la collection en 1ère position ou en position finale :
+                                                                                </label>
+                                                                               
+                                                                                <div class="col-sm-5">
+                                                                                    <div class="custom-control custom-radio d-inline-block mr-2">
+                                                                                        <input type="radio" id="typgra1" name="typgra" class="custom-control-input">
+                                                                                        <label class="custom-control-label" for="typgra1">oui</label>
+                                                                                    </div>
+                                                                                    <div class="custom-control custom-radio d-inline-block">
+                                                                                        <input type="radio" id="typgra2" name="typgra" class="custom-control-input" checked>
+                                                                                        <label class="custom-control-label" for="typgra2">non </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                        </div> <!-- .form-group -->
+
+                                                                        <div class="form-group col-sm-6">
+                                                                            <div class="form-group row">
+                                                                                <label for="limgra" class="col-sm-7">
+                                                                                Limiter l'affichage aux seules références en gras :
+                                                                                </label>
+                                                                               
+                                                                                <div class="col-sm-5">
+                                                                                    <div class="custom-control custom-radio d-inline-block mr-2">
+                                                                                        <input type="radio" id="limgra1" name="limgra" class="custom-control-input">
+                                                                                        <label class="custom-control-label" for="limgra1">oui</label>
+                                                                                    </div>
+                                                                                    <div class="custom-control custom-radio d-inline-block">
+                                                                                        <input type="radio" id="limgra2" name="limgra" class="custom-control-input" checked>
+                                                                                        <label class="custom-control-label" for="limgra2">non </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div> <!-- .form-group -->
+
                                                                         
-                                                                        <div class="col-12 ">
-                                                                            <label for="typaut" class="font-weight-bold text-right d-inline-block">
-                                                                            Auteurs (tous) 
-                                                                            </label>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut1" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut1">Nom, initiale(s) du(des) prénom(s) </label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut2" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut2">Nom Prénom(s)  </label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut3" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut3">Prénom(s) Nom  </label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut4" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut4">NOM (Prénom(s)) </label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
 
-                                                                     <div class="form-group row mb-2">
-
-                                                                        <div class="col-12">
-                                                                            <label for="typaut" class="font-weight-bold text-right d-inline-block">
-                                                                            Auteurs (de la collection) ou auteur IdHAL 
-                                                                            </label>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut1" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut1">soulignés</label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut2" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut2">gras </label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut3" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut3">aucuns </label>
-                                                                            </div>
-                                                                        </div>
                                                                     </div><!-- .form-group -->
 
-                                                                    <div class="form-group row mb-2">
+                                                                    <div class="form-group row  border border-gray-300 border-2 rounded p-2 mb-3">
+                                                                        <div class="form-group col-12">
+                                                                                <div class="form-group row">
+                                                                                    <label for="rstaff" class="col-sm-4">
+                                                                                    Restreindre l'affichage à certains auteurs de la collection et leur réserver la mise en valeur 
+                                                                                    </label>
+                                                                                    <div class="col-sm-8">
+                                                                                        <div class="input-group">
+                                                                                            <div class="input-group-prepend">
+                                                                                                <button type="button" tabindex="0" class="btn btn-info" data-html="true" data-toggle="popover" data-trigger="focus" title="Instructions" data-content="Renseigner sous la forme 'Nom Prénom' en remplaçant les espaces du nom ou du prénom par des tirets bas _ et séparer les auteurs par un tilde ~. Exemple : <strong>Jonchère Laurent~Troccaz Olivier~Le_Borgne Stéphane</strong>" data-original-title="">
+                                                                                                <i class="mdi mdi-comment-question text-white"></i>
+                                                                                            </button>
+                                                                                        </div>
+                                                                                        <input id="rstaff" class="form-control" type="text" name="rstaff" value="" >
+                                                                                    </div>
+                                                                                    
+                                                                                       
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div> <!-- .form-group -->
+                                                                        </div><!-- .form-group -->
 
-                                                                        <div class="col-12">
-                                                                            <label for="typaut" class="font-weight-bold text-right d-inline-block">
-                                                                            Mettre en évidence (\labo{xxxxx}) les auteurs de la collection dans l'export Bibtex
-                                                                            </label>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut1" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut1">soulignés</label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut2" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut2">gras </label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut3" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut3">aucuns </label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div><!-- .form-group -->
+                                                                    
+                                                                         <div class="form-group row  border border-gray-300 border-2 rounded p-2 mb-2">
 
-                                                                    <div class="form-group row mb-2">
-                                                                        
-                                                                        <div class="col-12">
-                                                                            <label for="typaut" class="font-weight-bold text-right d-inline-block">
-                                                                            Limiter l’affichage aux
-                                                                            </label>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut1" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut1">soulignés</label>
+                                                                            <div class="form-group col-sm-2">
+                                                                                <label for="typidh" class="font-weight-bold">
+                                                                                Identifiant HAL 
+                                                                                </label>
+                                                                                <select class="form-control" id="typidh" name="typidh">
+                                                                                    <option value="1">visible</option>
+                                                                                    <option value="2">invisible</option>
+                                                                                </select>
                                                                             </div>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut2" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut2">gras </label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut3" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut3">aucuns </label>
-                                                                            </div>
-                                                                        </div>
 
-                                                                    </div>
+                                                                            <div class="form-group col-sm-2">
+                                                                                <label for="racine" class="font-weight-bold">
+                                                                                URL racine HAL 
+                                                                                </label>
+                                                                                <select class="form-control" id="racine" name="racine">
+                                                                                    <option value="http://archivesic.ccsd.cnrs.fr/">http://archivesic.ccsd.cnrs.fr/</option>
+                                                                                    <option value="http://artxiker.ccsd.cnrs.fr/">http://artxiker.ccsd.cnrs.fr/</option>
+                                                                                    <option value="https://cel.archives-ouvertes.fr/">https://cel.archives-ouvertes.fr/</option>
+                                                                                    <option value="http://dumas.ccsd.cnrs.fr/">http://dumas.ccsd.cnrs.fr/</option>
+                                                                                    <option value="https://edutice.archives-ouvertes.fr/">https://edutice.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal.archives-ouvertes.fr/">https://hal.archives-ouvertes.fr/</option>
+                                                                                    <option value="http://hal.cirad.fr/">http://hal.cirad.fr/</option>
+                                                                                    <option value="http://hal.grenoble-em.com/">http://hal.grenoble-em.com</option>
+                                                                                    <option value="http://hal.in2p3.fr/">http://hal.in2p3.fr/</option>
+                                                                                    <option value="https://hal.inrae.fr/">https://hal.inrae.fr/</option>
+                                                                                    <option value="https://hal.inria.fr/">https://hal.inria.fr/</option>
+                                                                                    <option value="http://hal.ird.fr/">http://hal.ird.fr/</option>
+                                                                                    <option value="http://hal.univ-brest.fr/">http://hal.univ-brest.fr/</option>
+                                                                                    <option value="http://hal.univ-grenoble-alpes.fr/">http://hal.univ-grenoble-alpes.fr/</option>
+                                                                                    <option value="http://hal.univ-lille3.fr/">http://hal.univ-lille3.fr/</option>
+                                                                                    <option value="http://hal.univ-nantes.fr/">http://hal.univ-nantes.fr/</option>
+                                                                                    <option value="http://hal.univ-reunion.fr/">http://hal.univ-reunion.fr/</option>
+                                                                                    <option value="http://hal.univ-smb.fr/">http://hal.univ-smb.fr/</option>
+                                                                                    <option value="http://hal.upmc.fr/">http://hal.upmc.fr/</option>
+                                                                                    <option value="https://hal-agrocampus-ouest.archives-ouvertes.fr/">https://hal-agrocampus-ouest.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-agroparistech.archives-ouvertes.fr/">https://hal-agroparistech.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-amu.archives-ouvertes.fr/">https://hal-amu.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-anses.archives-ouvertes.fr/">https://hal-anses.archives-ouvertes.fr/</option>
+                                                                                    <option value="http://hal-audencia.archives-ouvertes.fr/">http://hal-audencia.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-auf.archives-ouvertes.fr/">https://hal-auf.archives-ouvertes.fr/</option>
+                                                                                    <option value="http://hal-bioemco.ccsd.cnrs.fr/">http://hal-bioemco.ccsd.cnrs.fr/</option>
+                                                                                    <option value="https://hal-bnf.archives-ouvertes.fr/">https://hal-bnf.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-brgm.archives-ouvertes.fr/">https://hal-brgm.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-cea.archives-ouvertes.fr/">https://hal-cea.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-centralesupelec.archives-ouvertes.fr/">https://hal-centralesupelec.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-clermont-univ.archives-ouvertes.fr/">https://hal-clermont-univ.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-confremo.archives-ouvertes.fr/">https://hal-confremo.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-cstb.archives-ouvertes.fr/">https://hal-cstb.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-descartes.archives-ouvertes.fr/">https://hal-descartes.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-ecp.archives-ouvertes.fr/">https://hal-ecp.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-em-normandie.archives-ouvertes.fr/">https://hal-em-normandie.archives-ouvertes.fr/</option>
+                                                                                    <option value="http://hal-emse.ccsd.cnrs.fr/">http://hal-emse.ccsd.cnrs.fr/</option>
+                                                                                    <option value="https://hal-enac.archives-ouvertes.fr/">https://hal-enac.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-enpc.archives-ouvertes.fr/">https://hal-enpc.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-ens.archives-ouvertes.fr/">https://hal-ens.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-enscp.archives-ouvertes.fr/">https://hal-enscp.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-ens-lyon.archives-ouvertes.fr/">https://hal-ens-lyon.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-ensta.archives-ouvertes.fr/">https://hal-ensta.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-ensta-bretagne.archives-ouvertes.fr/">https://hal-ensta-bretagne.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-ephe.archives-ouvertes.fr/">https://hal-ephe.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-esc-rennes.archives-ouvertes.fr/">https://hal-esc-rennes.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-espci.archives-ouvertes.fr/">https://hal-espci.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-essec.archives-ouvertes.fr/">https://hal-essec.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-genes.archives-ouvertes.fr/">https://hal-genes.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-hcl.archives-ouvertes.fr/">https://hal-hcl.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-hec.archives-ouvertes.fr/">https://hal-hec.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-hprints.archives-ouvertes.fr/">https://hal-hprints.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-icp.archives-ouvertes.fr/">https://hal-icp.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-ifp.archives-ouvertes.fr/">https://hal-ifp.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-inalco.archives-ouvertes.fr/">https://hal-inalco.archives-ouvertes.fr/</option>
+                                                                                    <option value="http://hal-ineris.ccsd.cnrs.fr/">http://hal-ineris.ccsd.cnrs.fr/</option>
+                                                                                    <option value="https://hal-inrap.archives-ouvertes.fr/">https://hal-inrap.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-insa-rennes.archives-ouvertes.fr/">https://hal-insa-rennes.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-institut-mines-telecom.archives-ouvertes.fr/">https://hal-institut-mines-telecom.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-insu.archives-ouvertes.fr/">https://hal-insu.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-iogs.archives-ouvertes.fr/">https://hal-iogs.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-irsn.archives-ouvertes.fr/">https://hal-irsn.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-lara.archives-ouvertes.fr/">https://hal-lara.archives-ouvertes.fr/</option>
+                                                                                    <option value="http://hal-lirmm.ccsd.cnrs.fr/">http://hal-lirmm.ccsd.cnrs.fr/</option>
+                                                                                    <option value="https://hal-meteofrance.archives-ouvertes.fr/">https://hal-meteofrance.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-mines-albi.archives-ouvertes.fr/">https://hal-mines-albi.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-mines-nantes.archives-ouvertes.fr/">https://hal-mines-nantes.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-mines-paristech.archives-ouvertes.fr/">https://hal-mines-paristech.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-mnhn.archives-ouvertes.fr/">https://hal-mnhn.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-neoma-bs.archives-ouvertes.fr/">https://hal-neoma-bs.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-normandie-univ.archives-ouvertes.fr/">https://hal-normandie-univ.archives-ouvertes.fr/</option>
+                                                                                    <option value="http://hal-obspm.ccsd.cnrs.fr/">http://hal-obspm.ccsd.cnrs.fr/</option>
+                                                                                    <option value="https://hal-onera.archives-ouvertes.fr/">https://hal-onera.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-paris1.archives-ouvertes.fr/">https://hal-paris1.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-pasteur.archives-ouvertes.fr/">https://hal-pasteur.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-pjse.archives-ouvertes.fr/">https://hal-pjse.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-polytechnique.archives-ouvertes.fr/">https://hal-polytechnique.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-pse.archives-ouvertes.fr/">https://hal-pse.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-rbs.archives-ouvertes.fr/">https://hal-rbs.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-riip.archives-ouvertes.fr/">https://hal-riip.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-sciencespo.archives-ouvertes.fr/">https://hal-sciencespo.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-sde.archives-ouvertes.fr/">https://hal-sde.archives-ouvertes.fr/</option>
+                                                                                    <option value="http://hal-sfo.ccsd.cnrs.fr/">http://hal-sfo.ccsd.cnrs.fr/</option>
+                                                                                    <option value="https://halshs.archives-ouvertes.fr/">https://halshs.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-ssa.archives-ouvertes.fr/">https://hal-ssa.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-supelec.archives-ouvertes.fr/">https://hal-supelec.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-uag.archives-ouvertes.fr/">https://hal-uag.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-ujm.archives-ouvertes.fr/">https://hal-ujm.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-unice.archives-ouvertes.fr/">https://hal-unice.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-unilim.archives-ouvertes.fr/">https://hal-unilim.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal.univ-angers.fr/">https://hal.univ-angers.fr/</option>
+                                                                                    <option value="https://hal-univ-artois.archives-ouvertes.fr/">https://hal-univ-artois.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-avignon.archives-ouvertes.fr/">https://hal-univ-avignon.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-bourgogne.archives-ouvertes.fr/">https://hal-univ-bourgogne.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-corse.archives-ouvertes.fr/">https://hal-univ-corse.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-diderot.archives-ouvertes.fr/">https://hal-univ-diderot.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-fcomte.archives-ouvertes.fr/">https://hal-univ-fcomte.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-lorraine.archives-ouvertes.fr/">https://hal-univ-lorraine.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-lyon3.archives-ouvertes.fr/">https://hal-univ-lyon3.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-orleans.archives-ouvertes.fr/">https://hal-univ-orleans.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-paris13.archives-ouvertes.fr/">https://hal-univ-paris13.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-paris3.archives-ouvertes.fr/">https://hal-univ-paris3.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-paris8.archives-ouvertes.fr/">https://hal-univ-paris8.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-paris-dauphine.archives-ouvertes.fr/">https://hal-univ-paris-dauphine.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-perp.archives-ouvertes.fr/">https://hal-univ-perp.archives-ouvertes.fr/</option>
+                                                                                    <option selected="" value="https://hal-univ-rennes1.archives-ouvertes.fr/">https://hal-univ-rennes1.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-tln.archives-ouvertes.fr/">https://hal-univ-tln.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-tlse2.archives-ouvertes.fr/">https://hal-univ-tlse2.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-tlse3.archives-ouvertes.fr/">https://hal-univ-tlse3.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-tours.archives-ouvertes.fr/">https://hal-univ-tours.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-univ-ubs.archives-ouvertes.fr/">https://hal-univ-ubs.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-upec-upem.archives-ouvertes.fr/">https://hal-upec-upem.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-usj.archives-ouvertes.fr/">https://hal-usj.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://hal-uvsq.archives-ouvertes.fr/">https://hal-uvsq.archives-ouvertes.fr/</option>
+                                                                                    <option value="http://jeannicod.ccsd.cnrs.fr/">http://jeannicod.ccsd.cnrs.fr/</option>
+                                                                                    <option value="https://medihal.archives-ouvertes.fr/">https://medihal.archives-ouvertes.fr/</option>
+                                                                                    <option value="http://memsic.ccsd.cnrs.fr/">http://memsic.ccsd.cnrs.fr/</option>
+                                                                                    <option value="https://pastel.archives-ouvertes.fr/">https://pastel.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://tel.archives-ouvertes.fr/">https://tel.archives-ouvertes.fr/</option>
+                                                                                    <option value="https://telearn.archives-ouvertes.fr/">https://telearn.archives-ouvertes.fr/</option>
+                                                                                    <option value="http://www.hal.inserm.fr/">http://www.hal.inserm.fr/</option>
+                                                                                </select>
+                                                                            </div>
 
-                                                                    <div class="form-group row mb-2">
+                                                                            <div class="form-group col-sm-2">
+                                                                                <label for="typurl" class="font-weight-bold">
+                                                                                Lien URL
+                                                                                </label>
+                                                                                <select class="form-control" id="typurl" name="typurl">
+                                                                                    <option value="1">visible</option>
+                                                                                    <option value="2">invisible</option>
+                                                                                </select>
+                                                                            </div>
 
-                                                                        <div class="col-12">
-                                                                            <label for="typaut" class="font-weight-bold text-right d-inline-block">
-                                                                            Remplacer les auteurs hors collection par '...' au-delà de  
-                                                                            </label>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut1" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut1">soulignés</label>
+                                                                            <div class="form-group col-sm-2">
+                                                                                <label for="typdoi" class="font-weight-bold">
+                                                                                Lien DOI
+                                                                                </label>
+                                                                                <select class="form-control" id="typdoi" name="typdoi">
+                                                                                    <option value="1">visible</option>
+                                                                                    <option value="2">invisible</option>
+                                                                                </select>
                                                                             </div>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut2" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut2">gras </label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut3" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut3">aucuns </label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div><!-- .form-group -->
 
-                                                                    <div class="form-group row mb-2">
-                                                                        
-                                                                        <div class="col-12">
-                                                                            <label for="typaut" class="font-weight-bold text-right d-inline-block">
-                                                                            Mettre la citation en gras si auteurs de la collection en 1ère position ou en position finale
-                                                                            </label>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut1" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut1">soulignés</label>
+                                                                            <div class="form-group col-sm-2">
+                                                                                <label for="typpub" class="font-weight-bold">
+                                                                                Lien Pubmed 
+                                                                                </label>
+                                                                                <select class="form-control" id="typpub" name="typpub">
+                                                                                    <option value="1">visible</option>
+                                                                                    <option value="2">invisible</option>
+                                                                                </select>
                                                                             </div>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut2" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut2">gras </label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut3" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut3">aucuns </label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
 
-                                                                    <div class="form-group row mb-2">
+                                                                            <div class="form-group col-sm-2">
+                                                                                <label for="typisbn" class="font-weight-bold">
+                                                                                ISBN
+                                                                                </label>
+                                                                                <select class="form-control" id="typisbn" name="typisbn">
+                                                                                    <option value="1">visible</option>
+                                                                                    <option value="2">invisible</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            
+                                                                        </div> <!-- .form-group -->
 
-                                                                        <div class="col-12">
-                                                                            <label for="typaut" class="font-weight-bold text-right d-inline-block">
-                                                                            Limiter l'affichage aux seules références en gras
-                                                                            </label>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut1" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut1">soulignés</label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut2" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut2">gras </label>
-                                                                            </div>
-                                                                            <div class="custom-control custom-radio d-inline-block">
-                                                                                <input type="radio" id="typaut3" name="typaut" class="custom-control-input">
-                                                                                <label class="custom-control-label" for="typaut3">aucuns </label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div><!-- .form-group -->
+                                                                        <div class="form-group row border border-gray-300 border-2 rounded p-2 mb-3">
 
-                                                                    <div class="form-group row mb-1 border-bottom">
-                                                                    </div>
+                                                                            <div class="form-group col-sm-2">
+                                                                                <label for="typcomm" class="font-weight-bold">
+                                                                                Commentaire
+                                                                                </label>
+                                                                                <select class="form-control" id="typcomm" name="typcomm">
+                                                                                    <option value="1">visible</option>
+                                                                                    <option value="2">invisible</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div class="form-group col-sm-2">
+                                                                                <label for="typrefi" class="font-weight-bold">
+                                                                                Référence interne
+                                                                                </label>
+                                                                                <select class="form-control" id="typrefi" name="typrefi">
+                                                                                    <option value="1">visible</option>
+                                                                                    <option value="2">invisible</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div class="form-group col-sm-2">
+                                                                                <label for="prefeq" class="font-weight-bold">
+                                                                                Afficher le préfixe AERES
+                                                                                </label>
+                                                                                <select class="form-control" id="prefeq" name="prefeq">
+                                                                                    <option value="1">oui</option>
+                                                                                    <option value="2">non</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div class="form-group col-sm-2">
+                                                                                <label for="surdoi" class="font-weight-bold">
+                                                                                Afficher les doublons par surlignage
+                                                                                </label>
+                                                                                <select class="form-control" id="surdoi" name="surdoi">
+                                                                                    <option value="1">visible</option>
+                                                                                    <option value="2">invisible</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div class="form-group col-sm-2">
+                                                                                <label for="sursou" class="font-weight-bold">
+                                                                                Afficher les absences d'affiliation par surlignage
+                                                                                </label>
+                                                                                <select class="form-control" id="sursou" name="sursou">
+                                                                                    <option value="1">oui</option>
+                                                                                    <option value="2">non</option>
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div class="form-group col-sm-2">
+                                                                                <label for="finass" class="font-weight-bold">
+                                                                                Afficher les financements associés (ANR/EU)
+                                                                                </label>
+                                                                                <select class="form-control" id="finass" name="finass">
+                                                                                    <option value="1">oui</option>
+                                                                                    <option value="2">non</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            
+                                                                        </div> <!-- .form-group -->
+                                                                    
+                                                                    
 
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="card mb-0">
-                                                            <div class="card-header bg-pink-soft" id="headingThree">
+                                                            <div class="card-header" id="headingThree">
                                                                 <h5 class="m-0">
                                                                     <a class="custom-accordion-title collapsed d-block"
                                                                         data-toggle="collapse" href="#collapseThree"
@@ -1144,15 +1373,15 @@
 
                         <div class="row">
                             <div class="col-12 d-flex">
-                                <div class="card w-100">
+                                <div class="card shadow-lg w-100">
                                     <div class="card-body">
-                                        <p class="text-muted mb-2 text-center font-weight-bold">
+                                        <p class=" mb-2 text-center font-weight-bold">
                                            <span class="mr-2">Exporter les données affichées en</span> 
                                            <a class="btn btn-primary" target="_blank" href="./HAL/extractionHAL_IRSET.rtf">RTF</a>
                                            <a class="btn btn-primary" target="_blank" href="./HAL/extractionHAL_IRSET.csv">en CSV</a>
                                            <a class="btn btn-primary" target="_blank" href="./HAL/extractionHAL_IRSET.bib">en Bibtex</a>
                                             <a class="btn btn-primary" target="_blank" href="./HAL/VOSviewerDOI_IRSET.txt">VOSviewerDOI</a>
-                                           <a class="btn btn-secondary" href="ExtractionHAL.php">Réinitialiser tous les paramètres</a>
+                                           <a class="btn btn-info" href="ExtractionHAL.php">Réinitialiser tous les paramètres</a>
                                             <span class="ml-2">Pas d'URL raccourcie directe demandée</span>
                                             
                                         </p>
@@ -1234,7 +1463,7 @@
             <!-- End Page content -->
             <!-- ============================================================== -->
 
-
+<button id="scrollBackToTop" class="btn btn-primary"><i class="mdi mdi-24px text-white mdi-chevron-double-up"></i></button>
         </div>
         <!-- END wrapper -->
 
@@ -1248,6 +1477,27 @@
         <script src="assets/js/vendor/Chart.bundle.min.js"></script>
         <!-- third party js ends -->
         <script src="assets/js/pages/hal-ur1.chartjs.js"></script>
+
+        <script type="text/javascript">
+            (function($) {
+                'use strict';
+
+                $(document).scroll(function() {
+                  var y = $(this).scrollTop();
+                  if (y > 200) {
+                    $('#scrollBackToTop').fadeIn();
+                  } else {
+                    $('#scrollBackToTop').fadeOut();
+                  }
+                });
+                $('#scrollBackToTop').each(function(){
+                    $(this).click(function(){ 
+                        $('html,body').animate({ scrollTop: 0 }, 'slow');
+                        return false; 
+                    });
+                });
+            })(window.jQuery)
+        </script>
         
 
         <!-- third party js -->
